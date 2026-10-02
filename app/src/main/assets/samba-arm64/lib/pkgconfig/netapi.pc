@@ -1,0 +1,11 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/samba-4.0
+
+Name: Samba libnetapi
+Description: A library to control CIFS servers
+Version: 1.0.0
+Libs:  -L${libdir} -lnetapi
+Cflags: -I${includedir}
+URL: http://www.samba.org/

@@ -1,0 +1,13 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=/data/data/com.termux/files/usr/lib
+includedir=/data/data/com.termux/files/usr/include
+
+Name: libmd
+Description: Message Digest functions from BSD systems
+Version: 1.2.0
+URL: https://www.hadrons.org/software/libmd/
+Maintainer: <libbsd@lists.freedesktop.org>
+License: BSD-3-Clause and BSD-2-Clause and ISC and Beerware
+Libs: -L${libdir} -lmd
+Cflags: -I${includedir}

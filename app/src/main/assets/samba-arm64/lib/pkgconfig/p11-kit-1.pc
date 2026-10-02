@@ -1,0 +1,14 @@
+prefix=/data/data/com.termux/files/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+p11_module_configs=/data/data/com.termux/files/usr/share/p11-kit/modules
+p11_module_path=/data/data/com.termux/files/usr/lib/pkcs11
+proxy_module=/data/data/com.termux/files/usr/lib/p11-kit-proxy.so
+p11_system_config_modules=/data/data/com.termux/files/usr/share/p11-kit/modules
+
+Name: p11-kit
+Description: Library and proxy module for properly loading and sharing PKCS#11 modules.
+Version: 0.26.5
+Libs: -L${libdir} -lp11-kit
+Cflags: -I${includedir}/p11-kit-1

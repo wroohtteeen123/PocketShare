@@ -1,0 +1,11 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=/data/data/com.termux/files/usr
+libdir=/data/data/com.termux/files/usr/lib64
+includedir=/data/data/com.termux/files/usr/include
+
+Name: libcap
+Description: libcap - linux capabilities library
+Version: 2.78
+Libs: -L${libdir} -lcap
+Libs.private: 
+Cflags: -I${includedir}

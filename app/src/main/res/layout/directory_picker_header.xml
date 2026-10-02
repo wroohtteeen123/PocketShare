@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+    <TextView style="@style/SectionTitle" android:text="@string/directory_path" />
+    <TextView android:id="@+id/picker_path" style="@style/PageCaption" android:textIsSelectable="true" android:textDirection="ltr" />
+    <LinearLayout android:id="@+id/picker_actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/picker_up" style="@style/PickerIconAction" android:contentDescription="@string/picker_up" android:tooltipText="@string/picker_up" app:icon="@drawable/ic_folder_up" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/picker_retry" style="@style/PickerIconAction" android:layout_marginStart="8dp" android:contentDescription="@string/picker_refresh" android:tooltipText="@string/picker_refresh" app:icon="@drawable/ic_refresh" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/picker_choose" style="@style/PickerIconAction" android:layout_marginStart="8dp" android:contentDescription="@string/picker_choose" android:tooltipText="@string/picker_choose" app:icon="@drawable/ic_check" />
+    </LinearLayout>
+    <TextView android:id="@+id/picker_message" style="@style/PageCaption" android:accessibilityLiveRegion="polite" />
+    <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/picker_progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=/data/data/com.termux/files/usr/lib
+includedir=/data/data/com.termux/files/usr/include
+
+Name: libbsd
+Description: Utility functions from BSD systems
+Version: 0.12.2
+URL: https://libbsd.freedesktop.org/
+Libs: -L${libdir} -lbsd
+Libs.private:  -lmd 
+Cflags: -I${includedir}

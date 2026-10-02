@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/brand_onprimary</item>
+        <item name="colorPrimaryContainer">@color/brand_primarycontainer</item>
+        <item name="colorOnPrimaryContainer">@color/brand_onprimarycontainer</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/brand_onsecondary</item>
+        <item name="colorSecondaryContainer">@color/brand_secondarycontainer</item>
+        <item name="colorOnSecondaryContainer">@color/brand_onsecondarycontainer</item>
+        <item name="colorSurface">@color/brand_surface</item>
+        <item name="colorSurfaceVariant">@color/brand_surfacevariant</item>
+        <item name="colorOnSurface">@color/brand_onsurface</item>
+        <item name="colorOnSurfaceVariant">@color/brand_onsurfacevariant</item>
+        <item name="colorOutline">@color/brand_outline</item>
+        <item name="colorOutlineVariant">@color/brand_outlinevariant</item>
+        <item name="colorError">@color/brand_error</item>
+        <item name="colorOnError">@color/brand_onerror</item>
+        <item name="colorSurfaceContainer">@color/brand_container</item>
+        <item name="colorSurfaceContainerLow">@color/brand_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/brand_surfacevariant</item>
+        <item name="colorSurfaceContainerHighest">@color/brand_surfacevariant</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">@bool/light_system_bars</item>
+        <item name="android:windowLightNavigationBar">@bool/light_system_bars</item>
+        <item name="android:statusBarColor">@color/brand_surface</item>
+        <item name="android:navigationBarColor">@color/brand_surface</item>
+        <item name="android:windowBackground">@color/brand_surface</item>
+        <item name="android:colorBackground">@color/brand_surface</item>
+        <item name="materialButtonStyle">@style/PrimaryAction</item>
+        <item name="textInputStyle">@style/PocketTextField</item>
+        <item name="materialAlertDialogTheme">@style/PocketDialogTheme</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Material3.TitleLarge</item>
+        <item name="materialButtonOutlinedStyle">@style/SecondaryAction</item>
+    </style>
+    <style name="PageTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:paddingEnd">64dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineLarge</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:accessibilityHeading">true</item>
+    </style>
+    <style name="PageCaption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+    </style>
+    <style name="SectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:accessibilityHeading">true</item>
+    </style>
+    <style name="DashboardCard" parent="Widget.Material3.CardView.Filled">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="cardCornerRadius">@dimen/pocket_card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">?attr/colorSurfaceContainer</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="LogContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:breakStrategy">simple</item>
+    </style>
+    <style name="BrandNavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/colorPrimaryContainer</item>
+        <item name="shapeAppearance">@style/BrandLogoShape</item>
+    </style>
+    <style name="LogDashboardCard" parent="DashboardCard">
+        </style>
+    <style name="BrandSurfaces" parent="">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/brand_onprimary</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/brand_onsecondary</item>
+        <item name="colorPrimaryContainer">@color/brand_primarycontainer</item>
+        <item name="colorOnPrimaryContainer">@color/brand_onprimarycontainer</item>
+        <item name="colorSecondaryContainer">@color/brand_secondarycontainer</item>
+        <item name="colorOnSecondaryContainer">@color/brand_onsecondarycontainer</item>
+        <item name="colorSurface">@color/brand_surface</item>
+        <item name="colorSurfaceVariant">@color/brand_surfacevariant</item>
+        <item name="colorSurfaceContainer">@color/brand_container</item>
+        <item name="colorSurfaceContainerLow">@color/brand_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/brand_container</item>
+        <item name="colorSurfaceContainerHighest">@color/brand_container</item>
+        <item name="colorOnSurface">@color/brand_onsurface</item>
+        <item name="colorOnSurfaceVariant">@color/brand_onsurfacevariant</item>
+        <item name="colorOutline">@color/brand_outline</item>
+        <item name="colorOutlineVariant">@color/brand_outlinevariant</item>
+        <item name="android:colorBackground">@color/brand_surface</item>
+        <item name="android:windowBackground">@color/brand_surface</item>
+    </style>
+    <style name="CornerAction" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">top|end</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="iconTint">?attr/colorOnPrimary</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+    <style name="PickerIconAction" parent="CornerAction">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+    </style>
+    <style name="BottomBarTheme" parent="">
+        <item name="colorPrimary">@color/navigation_accent</item>
+    </style>
+    <style name="BrandLogoShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/pocket_card_corner_radius</item>
+    </style>
+    <style name="SettingsAction" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+        <item name="icon">@drawable/ic_chevron_right</item>
+        <item name="iconGravity">end</item>
+        <item name="iconSize">20dp</item>
+    </style>
+    <style name="SettingsSectionToggle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="icon">@drawable/ic_expand_more</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">?attr/colorOnSurfaceVariant</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+    </style>
+    <style name="PrimaryAction" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+    </style>
+    <style name="SecondaryAction" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="android:singleLine">false</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+    </style>
+    <style name="QuietAction" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="cornerRadius">@dimen/pocket_control_corner_radius</item>
+    </style>
+    <style name="PocketTextField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/pocket_field_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/pocket_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/pocket_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/pocket_field_corner_radius</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="PocketDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/PocketDialog</item>
+    </style>
+    <style name="PocketDialog" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearanceOverlay">@style/PocketDialogShape</item>
+    </style>
+    <style name="PocketDialogShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/pocket_card_corner_radius</item>
+    </style>
+    <style name="MetricValue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineSmall</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+</resources>

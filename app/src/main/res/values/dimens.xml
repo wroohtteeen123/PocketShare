@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- Reference: 24dp radius with 60% smoothing. Clover buttons keep their official shape. -->
+    <dimen name="pocket_corner_radius">24dp</dimen>
+    <dimen name="pocket_card_corner_radius">24dp</dimen>
+    <dimen name="pocket_control_corner_radius">24dp</dimen>
+    <dimen name="pocket_field_corner_radius">24dp</dimen>
+</resources>
