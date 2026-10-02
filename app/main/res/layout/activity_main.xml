@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?attr/colorSurface">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ScrollView android:id="@+id/home_page" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                <TextView style="@style/PageTitle" android:text="@string/nav_home" />
+                <TextView style="@style/PageCaption" android:text="@string/home_caption" />
+                <com.google.android.material.card.MaterialCardView style="@style/DashboardCard" app:cardBackgroundColor="?attr/colorPrimaryContainer" app:cardCornerRadius="@dimen/pocket_corner_radius">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                        <TextView style="@style/PageCaption" android:textColor="?attr/colorOnPrimaryContainer" android:text="POCKETSHARE  /  SMB2 · SMB3" />
+                        <TextView style="@style/SectionTitle" android:textColor="?attr/colorOnPrimaryContainer" android:text="@string/home_title" />
+                        <TextView style="@style/PageCaption" android:textColor="?attr/colorOnPrimaryContainer" android:text="@string/home_description" />
+                        <TextView style="@style/PageCaption" android:textColor="?attr/colorOnPrimaryContainer" android:text="@string/service_activity" />
+                        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:accessibilityLiveRegion="polite" android:lineSpacingExtra="4dp" android:textColor="?attr/colorOnPrimaryContainer" android:textSize="14sp" android:layout_marginBottom="16dp" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/start" style="@style/PrimaryAction" android:layout_width="0dp" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/start" android:layout_weight="1" android:layout_marginEnd="8dp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/stop" style="@style/SecondaryAction" android:layout_width="0dp" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/stop" android:layout_weight="1" android:layout_marginEnd="0dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView style="@style/SectionTitle" android:text="@string/speed_title" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="true" android:gravity="top" android:minHeight="112dp">
+                    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard" android:layout_width="0dp" android:layout_weight="1" app:cardCornerRadius="@dimen/pocket_card_corner_radius" android:layout_height="wrap_content">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:minHeight="120dp">
+                            <TextView style="@style/PageCaption" android:text="@string/upload" android:layout_marginBottom="8dp" />
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/upload_speed" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="40dp" android:text="—" style="@style/MetricValue" android:maxLines="1" android:gravity="start|center_vertical" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="14sp" app:autoSizeMaxTextSize="24sp" app:autoSizeStepGranularity="1sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <Space android:layout_width="12dp" android:layout_height="1dp" android:importantForAccessibility="no" />
+                    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard" android:layout_width="0dp" android:layout_weight="1" app:cardCornerRadius="@dimen/pocket_card_corner_radius" android:layout_height="wrap_content">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:minHeight="120dp">
+                            <TextView style="@style/PageCaption" android:text="@string/download" android:layout_marginBottom="8dp" />
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/download_speed" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="40dp" android:text="—" style="@style/MetricValue" android:maxLines="1" android:gravity="start|center_vertical" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="14sp" app:autoSizeMaxTextSize="24sp" app:autoSizeStepGranularity="1sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+                <TextView style="@style/PageCaption" android:id="@+id/speed_caption" android:text="@string/speed_caption" />
+                <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                        <TextView style="@style/SectionTitle" android:text="@string/connect_title" />
+                        <TextView android:id="@+id/ip_address" style="@style/PageCaption" android:text="" />
+                        <TextView android:id="@+id/connection" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4dp" android:textColor="?attr/colorPrimary" android:textIsSelectable="true" android:textSize="16sp" android:textStyle="normal" android:fontFamily="monospace" />
+                        <com.google.android.material.button.MaterialButton android:id="@+id/copy_connection" style="@style/SecondaryAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/copy_connection" />
+                        <TextView style="@style/PageCaption" android:text="@string/endpoint_caption" />
+                        <ImageView android:id="@+id/qr_code" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginVertical="12dp" android:adjustViewBounds="true" android:contentDescription="@string/qr_description" android:scaleType="fitCenter" />
+                        <TextView style="@style/PageCaption" android:text="@string/connect_caption" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@+id/settings_page" android:clipToPadding="false" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                <TextView style="@style/PageTitle" android:text="@string/nav_settings" />
+                <TextView android:text="@string/settings_caption" style="@style/PageCaption" />
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardBackgroundColor="?attr/colorSurfaceContainer" style="@style/DashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_settings_directory" style="@style/SettingsSectionToggle" android:text="@string/directory_title" />
+                        <TextView android:text="@string/settings_directory_summary" style="@style/PageCaption" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/settings_directory_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <com.google.android.material.textfield.TextInputLayout android:id="@+id/directory_input" style="@style/PocketTextField" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:hint="@string/directory_path">
+                                <com.google.android.material.textfield.TextInputEditText android:id="@+id/share_directory" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions" android:singleLine="true" android:textSize="14sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.button.MaterialButton android:id="@+id/select_directory" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/select_directory" style="@style/SecondaryAction" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/default_directory" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/default_directory" style="@style/QuietAction" />
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/directory_caption" android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardBackgroundColor="?attr/colorSurfaceContainer" style="@style/DashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_settings_network" style="@style/SettingsSectionToggle" android:text="@string/network_title" />
+                        <TextView android:text="@string/settings_network_summary" style="@style/PageCaption" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/settings_network_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/root_mode" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/standard_port" android:textSize="16sp" android:textStyle="normal" />
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/standard_caption" android:textSize="14sp" />
+                            <com.google.android.material.textfield.TextInputLayout android:id="@+id/port_input" style="@style/PocketTextField" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginVertical="8dp" android:hint="@string/port_hint" app:helperText="@string/port_helper">
+                                <com.google.android.material.textfield.TextInputEditText android:id="@+id/port" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:saveEnabled="false" android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <TextView android:id="@+id/settings_endpoint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="" android:textIsSelectable="true" android:textSize="14sp" />
+                            <TextView style="@style/SectionTitle" android:text="@string/speed_settings_title" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/choose_speed_interval" style="@style/SettingsAction" android:text="@string/speed_settings_title" />
+                            <TextView style="@style/PageCaption" android:text="@string/speed_settings_caption" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardBackgroundColor="?attr/colorSurfaceContainer" style="@style/DashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_settings_access" style="@style/SettingsSectionToggle" android:text="@string/access_title" />
+                        <TextView android:text="@string/settings_access_summary" style="@style/PageCaption" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/settings_access_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/guest_access" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/guest_access" android:textSize="16sp" android:textStyle="normal" />
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/guest_caption" android:textSize="14sp" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/manage_accounts" style="@style/SettingsAction" android:text="@string/accounts_title" />
+                            <TextView android:id="@+id/accounts_summary" style="@style/PageCaption" />
+                            <TextView style="@style/PageCaption" android:text="@string/accounts_description" />
+                            <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/allow_write" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/guest_write" android:textSize="16sp" android:textStyle="normal" />
+                            <TextView android:id="@+id/access_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="" android:textSize="14sp" />
+                            <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/require_encryption" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/require_encryption" android:textSize="16sp" android:textStyle="normal" />
+                            <TextView style="@style/PageCaption" android:text="@string/encryption_hint" />
+                            <TextView style="@style/SectionTitle" android:text="@string/server_copy_title" />
+                            <TextView style="@style/PageCaption" android:text="@string/server_copy_hint" />
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/directory_cache" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/directory_cache_title" android:textSize="16sp" android:textStyle="normal" />
+                            <TextView style="@style/PageCaption" android:text="@string/directory_cache_hint" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/settings_support" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/reset_settings" android:layout_width="0dp" android:layout_weight="1" android:minHeight="52dp" android:layout_height="wrap_content" android:text="@string/reset_settings" style="@style/QuietAction" android:paddingHorizontal="8dp" android:layout_marginEnd="8dp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/save_settings" android:layout_width="0dp" android:layout_weight="1" android:minHeight="52dp" android:layout_height="wrap_content" android:text="@string/save_settings" style="@style/PrimaryAction" android:paddingHorizontal="8dp" />
+                </LinearLayout>
+                <TextView android:id="@+id/settings_feedback" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:accessibilityLiveRegion="polite" android:text="" android:textSize="14sp" android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@+id/logs_page" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                <TextView style="@style/PageTitle" android:text="@string/nav_logs" />
+                <TextView style="@style/PageCaption" android:text="@string/logs_caption" />
+                <com.google.android.material.card.MaterialCardView style="@style/LogDashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_components" style="@style/SettingsSectionToggle" android:text="@string/components_title" />
+                        <TextView style="@style/PageCaption" android:text="@string/logs_components_summary" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/components_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <TextView style="@style/PageCaption" android:text="@string/components_caption" />
+                            <LinearLayout android:id="@+id/component_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/refresh_components" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/refresh_components" style="@style/QuietAction" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/LogDashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_records" style="@style/SettingsSectionToggle" android:text="@string/records_title" />
+                        <TextView style="@style/PageCaption" android:text="@string/records_caption" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/records_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/refresh_logs" style="@style/SecondaryAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/refresh_logs" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/copy_logs" style="@style/QuietAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/copy_logs" />
+                            <TextView android:id="@+id/log_refresh_status" style="@style/PageCaption" android:accessibilityLiveRegion="polite" android:text="@string/not_refreshed" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/LogDashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_events" style="@style/SettingsSectionToggle" android:text="@string/events_title" />
+                        <TextView style="@style/PageCaption" android:text="@string/logs_events_summary" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/events_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <TextView android:id="@+id/logs" style="@style/LogContent" />
+                            <com.google.android.material.button.MaterialButton android:id="@+id/clear_logs" style="@style/QuietAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/clear_events" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/LogDashboardCard">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/toggle_diagnostics" style="@style/SettingsSectionToggle" android:text="@string/diagnostics_title" />
+                        <TextView style="@style/PageCaption" android:text="@string/logs_diagnostics_summary" android:paddingHorizontal="8dp" />
+                        <LinearLayout android:id="@+id/diagnostics_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                            <TextView style="@style/PageCaption" android:text="@string/diagnostics_caption" />
+                            <TextView android:id="@+id/runtime_logs" style="@style/LogContent" android:text="@string/no_diagnostics" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:id="@+id/archive_page" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:clipToPadding="false">
+            <include layout="@layout/archive_panel" />
+        </ScrollView>
+        <io.pocketshare.CloverButton android:id="@+id/open_help" style="@style/CornerAction" android:contentDescription="@string/help_menu" app:icon="@drawable/ic_lifebuoy" />
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/navigation" android:theme="@style/BottomBarTheme" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="?attr/colorSurface" app:itemActiveIndicatorStyle="@style/BrandNavigationIndicator" app:itemIconTint="@color/navigation_colors" app:menu="@menu/navigation" app:labelVisibilityMode="labeled" android:minHeight="80dp" app:itemTextAppearanceActive="@style/TextAppearance.Material3.LabelMedium" app:itemTextAppearanceInactive="@style/TextAppearance.Material3.LabelMedium" app:itemIconSize="24dp" />
+</LinearLayout>

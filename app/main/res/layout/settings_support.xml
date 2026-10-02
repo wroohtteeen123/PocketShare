@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="0dp">
+    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:orientation="vertical">
+            <com.google.android.material.button.MaterialButton android:id="@+id/toggle_settings_permissions" style="@style/SettingsSectionToggle" android:text="@string/permissions_title" />
+            <TextView android:text="@string/settings_permissions_summary" style="@style/PageCaption" android:paddingHorizontal="8dp" />
+            <LinearLayout android:id="@+id/settings_permissions_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp">
+                <TextView style="@style/PageCaption" android:text="@string/permissions_caption" />
+                <TextView android:id="@+id/permission_summary" style="@style/PageCaption" android:accessibilityLiveRegion="polite" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/notification_settings" style="@style/SettingsAction" android:text="@string/notification_settings" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/storage_settings" style="@style/SettingsAction" android:text="@string/storage_settings" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/battery_settings" style="@style/SettingsAction" android:text="@string/battery_settings" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

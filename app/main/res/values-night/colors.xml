@@ -1,0 +1,23 @@
+<resources>
+    <color name="brand_primary">#058BEF</color>
+    <color name="brand_qr_ink">#058BEF</color>
+    <color name="brand_onprimary">#061521</color>
+    <!-- Preserve the light palette's pink card distribution at lower luminance. -->
+    <color name="brand_primarycontainer">#281E24</color>
+    <color name="brand_onprimarycontainer">#F3E7ED</color>
+    <color name="brand_secondary">#058BEF</color>
+    <color name="brand_onsecondary">#061521</color>
+    <color name="brand_secondarycontainer">#281E24</color>
+    <color name="brand_onsecondarycontainer">#F3E7ED</color>
+    <color name="brand_surface">#17151A</color>
+    <color name="brand_surfacevariant">#281E24</color>
+    <color name="brand_onsurface">#F3E7ED</color>
+    <color name="brand_onsurfacevariant">#D1BBC5</color>
+    <color name="brand_outline">#A38B97</color>
+    <color name="brand_outlinevariant">#55414C</color>
+    <color name="brand_container">#281E24</color>
+    <color name="brand_error">#FFB4AB</color>
+    <color name="brand_onerror">#690005</color>
+    <bool name="light_system_bars">false</bool>
+    <color name="navigation_accent">#8ECAFF</color>
+</resources>

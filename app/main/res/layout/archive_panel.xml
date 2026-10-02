@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+    <TextView style="@style/PageTitle" android:text="@string/archive_title" />
+    <TextView style="@style/PageCaption" android:text="@string/archive_description" />
+    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/archive_monitor" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/archive_monitor_switch" android:textSize="16sp" android:textStyle="normal" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/archive_status" style="@style/PageCaption" android:accessibilityLiveRegion="polite" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/SectionTitle" android:text="@string/archive_locations" />
+            <com.google.android.material.textfield.TextInputLayout style="@style/PocketTextField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/archive_source">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/archive_source_path" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions" android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/archive_pick_source" style="@style/SecondaryAction" android:text="@string/select_directory" />
+            <com.google.android.material.textfield.TextInputLayout style="@style/PocketTextField" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="@string/archive_output">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/archive_output_path" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions" android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/archive_pick_output" style="@style/SecondaryAction" android:text="@string/select_directory" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/SectionTitle" android:text="@string/archive_format" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/archive_format_choice" style="@style/SecondaryAction" android:gravity="start|center_vertical" app:icon="@drawable/ic_expand_more" app:iconGravity="end" />
+            <TextView style="@style/SectionTitle" android:layout_marginTop="16dp" android:text="@string/archive_level" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/archive_level_choice" style="@style/SecondaryAction" android:gravity="start|center_vertical" app:icon="@drawable/ic_expand_more" app:iconGravity="end" />
+            <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/archive_existing" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:layout_marginTop="12dp" android:text="@string/archive_existing" android:textSize="16sp" android:textStyle="normal" />
+            <TextView style="@style/PageCaption" android:text="@string/archive_rules" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView style="@style/LogDashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/archive_toggle_log" style="@style/SettingsSectionToggle" android:text="@string/records_title" />
+            <TextView style="@style/PageCaption" android:text="@string/archive_records_summary" android:paddingHorizontal="8dp" />
+            <TextView android:id="@+id/archive_log" style="@style/LogContent" android:visibility="gone" android:paddingHorizontal="8dp" android:paddingBottom="8dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

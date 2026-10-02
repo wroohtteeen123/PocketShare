@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+            <TextView style="@style/SectionTitle" android:text="@string/appearance_title" app:drawableStartCompat="@drawable/ic_notification" android:drawablePadding="12dp" app:drawableTint="?attr/colorPrimary" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/choose_theme" style="@style/SettingsAction" android:text="@string/theme_title" />
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/dynamic_colors" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/dynamic_title" android:paddingVertical="8dp" android:textSize="16sp" android:textStyle="normal" />
+            <TextView android:id="@+id/dynamic_caption" style="@style/PageCaption" android:text="@string/dynamic_caption" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOutlineVariant" android:layout_marginVertical="8dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/choose_language" style="@style/SettingsAction" android:text="@string/language_title" />
+            <TextView style="@style/PageCaption" android:text="@string/language_caption" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

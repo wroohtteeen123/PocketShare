@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView style="@style/PageTitle" android:text="@string/help_menu" />
+        <TextView android:text="@string/help_caption" style="@style/PageCaption" />
+        <include layout="@layout/settings_appearance" />
+        <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                <TextView style="@style/SectionTitle" android:text="@string/about_title" />
+                <TextView android:id="@+id/app_version" style="@style/PageCaption" />
+                <TextView style="@style/PageCaption" android:text="@string/components_description" />
+                <TextView style="@style/PageCaption" android:text="@string/archive_components" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView style="@style/DashboardCard">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:text="@string/support_title" style="@style/SectionTitle" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/connection_help" style="@style/SettingsAction" android:text="@string/help_title" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/open_licenses" style="@style/SettingsAction" android:text="@string/licenses_title" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
